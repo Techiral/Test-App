@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            
+                            <div class="row">
+                                <h3>Cold E-mail Generator</h3>
+                                <!--[ daily sales section ] start-->
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <form class="" action="/cold_e-mail_generator" method="post">
+                                                        <div class="form-group">
+                                                            <label for="title">Product Name</label>
+                                                            <input type="text" class="form-control" name="title" placeholder="eg. BorgeTube">
+                                                            <br>
+                                                            <label for="desc">Describe your Product</label>
+                                                            <input type="text" class="form-control" name="desc" placeholder="eg. An Online Tool that helps to rank YouTube Content and Videos With The Help Of AI">
+                                                            <br>
+                                                            <label for="home">Homepage</label>
+                                                            <input type="text" class="form-control" name="home" placeholder="eg. https://techiral.io/borgetube/">
+                                                            <br>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--[ daily sales section ] end-->
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                    <div>
+                                                        <h3 class="text-primary">Cold E-mail Generated:</h3>
+                                                        <h3 class="lead">{{openAIAnswer|safe}}</h3>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>            
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->            
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

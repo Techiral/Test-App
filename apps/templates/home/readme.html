@@ -1,0 +1,84 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            
+                            <div class="row">
+                                <h3>GitHub Readme Generator</h3>
+                                <!--[ daily sales section ] start-->
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <form class="" action="/github_readme_generator" method="post">
+                                                        <div class="form-group">
+                                                            <label for="title">Type</label>
+                                                            <input type="text" class="form-control" name="title" placeholder="eg. desktop app">
+                                                            <br>
+                                                            <label for="desc">Product</label>
+                                                            <input type="text" class="form-control" name="desc" placeholder="eg. Rectify">
+                                                            <br>
+                                                            <label for="home">Description</label>
+                                                            <input type="text" class="form-control" name="home" placeholder="eg. which is a business generator, and management tool. With this tool, you can build apps for yourself, build websites, and others">
+                                                            <br>
+                                                            <label for="url">Home Url</label>
+                                                            <input type="text" class="form-control" name="url" placeholder="eg. https:/octacat.octa.com/rectify">
+                                                            <br>
+                                                            <label for="mail">E-mail</label>
+                                                            <input type="text" class="form-control" name="mail" placeholder="eg. rectify@octa.com">
+                                                            <br>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--[ daily sales section ] end-->
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                    <div>
+                                                        <h3 class="text-primary">Readme Generated:</h3>
+                                                        <h3 class="lead">{{openAIAnswer|safe}}</h3>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>            
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->            
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
