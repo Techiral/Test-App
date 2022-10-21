@@ -5,3 +5,4 @@ python-dotenv==0.19.2
 Flask-Minify==0.37
 flask_sqlalchemy
 flask_login
+flask_mail
