@@ -6,3 +6,4 @@ Flask-Minify==0.37
 flask_sqlalchemy
 flask_login
 flask_mail
+openai
