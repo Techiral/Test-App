@@ -14,5 +14,3 @@ class Config(object):
     FLASK_APP= "app"
     FLASK_ENV= "development"
 
-
-#OPENAI_API_KEY=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
