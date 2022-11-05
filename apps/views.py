@@ -619,5 +619,5 @@ def love_generator():
 
 @views.route('/privacy/')
 def privacy():
-    return render_template('/privacy.html', **locals())
+    return render_template('/home/privacy.html', **locals())
 
