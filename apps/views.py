@@ -617,3 +617,7 @@ def love_generator():
 
     return render_template('/home/love.html', **locals())
 
+@views.route('/privacy/')
+def privacy():
+    return render_template('/privacy.html', **locals())
+
